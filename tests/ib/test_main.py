@@ -25,6 +25,6 @@ def test_run(page: Page):
     page.locator(p.SHORT_NAME_BUTTON).click()
     # Click text=Выйти
     page.locator("text=Выйти").click()
-    assert page.locator("text=Выйти").is_visible()
+    #assert page.locator("text=Выйти").is_visible()
     page.wait_for_url("https://test-ib.mybank.by:8086/main_unauthorised")
 
