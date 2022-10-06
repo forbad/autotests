@@ -1,5 +1,5 @@
 import allure
-from tests.api.kabinet_agena import metods
+from src.variables.kabinet_agenta import metods
 
 
 @allure.feature('Отправка заявки')
