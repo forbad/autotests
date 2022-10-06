@@ -1,4 +1,5 @@
 {
+    "base_url": "https://test-ib.mybank.by",
     "sms": "1234",
     "user": {
         "phone": "297612114",
