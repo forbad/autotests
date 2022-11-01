@@ -11,14 +11,6 @@ def get_playwright():
         yield playwright
 
 
-# @fixture
-# def desktop_app(get_playwright, request):
-#     base_url = request.config.getoption('--base_url')
-#     app = App(get_playwright, base_url=base_url)
-#     app.goto("/main_unauthorised")
-#     yield app
-#     app.close()
-
 @fixture
 def desktop_app(get_playwright, request):
     base_url = request.config.getoption('--secure')

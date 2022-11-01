@@ -10,4 +10,4 @@
 # Documentation: playwright.dev
 
 ## Start test with the headed and some browsers
-## pytest --headed -v -s --alluredir="D:projects\autotests\allurereport\reports" tests/test_main.py --browser chromium --browser firefox
+## pytest --headed -v -s tests/ib/test_main.py --browser chromium --browser firefox --alluredir="D:\Projects\autotests\allurereports\reports"
