@@ -11,3 +11,6 @@
 
 ## Start test with the headed and some browsers
 ## pytest --headed -v -s tests/ib/test_main.py --browser chromium --browser firefox --alluredir="D:\Projects\autotests\allurereports\reports"
+
+## Запуск отчета allure
+## allure serve .\report\ --port 3060
