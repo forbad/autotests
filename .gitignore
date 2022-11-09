@@ -127,8 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
+**/report.xml
 .idea/
 allurereports/
+report/
+src/kabinet_agenta/report/
+tests/api/report/
+tests/ib/report/
 
-.report.xml

@@ -3,8 +3,11 @@ import json
 import pytest
 from settings import *
 from pytest import fixture
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Playwright, APIRequestContext
 from page_objects.application import App
+
+from typing import Generator
+from src.kabinet_agenta import data_ka
 
 
 @fixture(scope='session')
@@ -103,3 +106,14 @@ def load_config(project_path: str, file: str) -> dict:
     config_file = os.path.join(project_path, file)
     with open(config_file) as cfg:
         return json.loads(cfg.read())
+
+
+@pytest.fixture(scope="session")
+def api_request_context(
+    playwright: Playwright,
+) -> Generator[APIRequestContext, None, None]:
+    request_context = playwright.request.new_context(
+        base_url=data_ka.url_stend
+    )
+    yield request_context
+    request_context.dispose()
